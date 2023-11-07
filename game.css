@@ -1,6 +1,91 @@
-.flex-form {
-  width: 50%;
+@font-face {
+  font-family: Lato;
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+
+body.dark {
+  background-color: #292c35;
+}
+
+.dark h1 {
+  color: pink;
+}
+.dark.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid pink; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .30em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(100, end),
+    blink-caret-dark .2s step-end infinite;
+}
+@keyframes blink-caret-dark {
+  from, to { border-color: transparent }
+  50% { border-color: pink; }
+}
+
+body {
+  font-family: Lato;
+}
+
+h1 {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  text-shadow: -3px -3px 5px;
+  color: chocolate;
+  width: 50vw;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid chocolate; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .30em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(100, end),
+    blink-caret .2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: chocolate; }
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }

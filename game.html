@@ -5,31 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="stylesheet" href="game.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Document</title>
 </head>
-<body>
-  <h1>GAME 1</h1>
+<body class="typewriter">
+  <h1>Ini adalah game tembak-tembakan</h1>
 
-  <form>
-    <fieldset class="flex-form">
-      <legend>Biodata</legend>
-
-      <label for="name">Nama</label>
-      <input id="name" type="text" name="name" />
-      <label for="email">Email</label>
-      <input id="email" type="text" name="email" />
-      <label for="phone_number">Nomor HP</label>
-      <input id="phone_number" type="number" name="phone_number" />
-
-      <label for="password">Password</label>
-      <input id="password" type="password" />
-      
-      <label for="confirm_password">Confirm Password</label>
-      <input id="confirm_password" type="password" />
-    </fieldset>
-
-    <input type="submit" value="Kirim" onclick="submitForm(event)"/>
-  </form>
+  <div>
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbox-label">
+      <i class="fas fa-moon" style="color: #f1c40f;"></i>
+      <i class="fas fa-sun" style="color: #f39c12;"></i>
+      <span class="ball"></span>
+    </label>
+  </div>
   
   <script src="game.js"></script>
 </body>
